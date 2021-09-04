@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gallery</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="img/gallery.jpg">
+<nav>
+<img src="img/logo.jpg" class="logo" height="80px" width="80px">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="aboutus.html">About Us</a></li>
+	<li><a href="services.html">Our Services</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+<p>OUR COLLECTIONS</p>
+<section class="filter-gallery">
+<div class="portfolio-menu">
+<ul>
+	<li class="active" data-filter = "*">All</li>
+	<li data-filter=".animal">Animals</li>
+	<li data-filter=".fashion">Fashion</li>
+	<li data-filter=".food">Foods</li>
+	<li data-filter=".jewellery">Jewelleries</li>
+</ul>
+</div>
+
+<div class="portfolio-item">
+	<div class="item animal">
+		<img src="img1/a1.png" width="100px" height="100px">
+	</div>
+	<div class="item fashion">
+		<img src="img1/f1.jpg" width="100px" height="100px">
+	</div>
+	<div class="item food">
+		<img src="img1/cake.jpg" width="100px" height="100px">
+	</div>
+	<div class="item jewellery">
+		<img src="img1/j1.jpg" width="100px" height="100px">
+	</div>
+	<div class="item animal">
+		<img src="img1/a2.jpg" width="100px" height="100px">
+	</div>
+	<div class="item fashion">
+		<img src="img1/f2.jpg" width="100px" height="100px">
+	</div>
+	<div class="item food">
+		<img src="img1/icecream.jpg" width="100px" height="100px">
+	</div>
+	<div class="item jewellery">
+		<img src="img1/j2.png" width="100px" height="100px">
+	</div>
+	<div class="item animal">
+		<img src="img1/a3.jpg" width="100px" height="100px">
+	</div>
+	<div class="item fashion">
+		<img src="img1/f3.png" width="100px" height="100px">
+	</div>
+	<div class="item food">
+		<img src="img1/pancake.jpg" width="100px" height="100px">
+	</div>
+	<div class="item jewellery">
+		<img src="img1/j3.jpg" width="100px" height="100px">
+	</div>
+	<div class="item animal">
+		<img src="img1/a4.jpg" width="100px" height="100px">
+	</div>
+	<div class="item fashion">
+		<img src="img1/f5.jpg" width="100px" height="100px">
+	</div>
+	<div class="item food">
+		<img src="img1/rice.jpg" width="100px" height="100px">
+	</div>
+	<div class="item jewellery">
+		<img src="img1/j4.jpeg" width="100px" height="100px">
+	</div>
+	<div class="item animal">
+		<img src="img1/a5.jpg" width="100px" height="100px">
+	</div>
+	<div class="item food">
+		<img src="img1/shake.jpg" width="100px" height="100px">
+	</div>
+	<div class="item jewellery">
+		<img src="img1/j5.jpg" width="100px" height="100px">
+	</div>
+	<div class="item fashion">
+		<img src="img1/f4.jpg" width="100px" height="100px">
+	</div>
+
+
+
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+	$('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+	$( '.portfolio-menu ul li' ).click(function() {
+		$( '.portfolio-menu ul li' ).removeClass('active');
+		$(this).addClass('active');
+
+		var selector = $(this).attr('data-filter');
+		$('.portfolio-item').isotope({
+			filter:selector
+		});
+		return false;
+	});
+</script>
+</body> 
+<footer>
+	
+    <p>
+	<i><b> &copy; We're a team of non-cynics who truly care for our work</b></i>
+		</p>
+		<a href=mailto:><nowiki><bhawanabasnet590@gmail.com  class="color"> Click here to send us an email!!!</a>
+		<br><a href = "mailto:bhawanabasnet590@gmail.com?subject = Feedback&body = Message" class="color1">Send Feedback!!!</a>
+		<br><a href="https://www.facebook.com/bhawanabasnet" target="_blank" class="color2">follow us in facebook!!!</a>
+		<address>
+		DHOBIGHAT,Lalitpur,Nepal
+		STREET NO:3
+		WARD:3
+
+		</address>
+</footer>
+    </html>
